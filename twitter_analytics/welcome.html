@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+ 
+       <meta charset="utf-8">
+  <link rel="stylesheet" href="ref/bootstrap.min.css.css">
+  <script src="ref/jquery.min.js"></script>
+  <script src="ref/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="silviomoreto-bootstrap-select-a8ed49e/dist/css/bootstrap-select.css">
+    <script src="silviomoreto-bootstrap-select-a8ed49e/dist/js/bootstrap-select.js"></script>
+  <link rel="stylesheet" href="ref/jquery-ui.css">
+  <script src="ref/jquery-ui.js"></script>
+       <!-- highcharts -->
+
+        
+        
+        
+        
+        <style>
+
+            body {
+                font-family: Microsoft Yahei;   
+            }
+            .nav {
+                height: 100px;
+            }
+            .nav, .navbar-header{
+                height: 100px;   
+            }
+            a {
+                height: 100px;   
+                
+                padding-top:40px;
+            }
+            
+            #slide1 {
+                position: fixed;
+                top:100px;
+                background: url(""); 
+                width: 100%;
+                height: 455px;
+                  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+                background-image: url("wall.jpg");
+                   
+            }
+            #slide2 {
+                position: relative;
+                top: 555px;
+                width: 100%;
+                height: 900px;
+                background-color: antiquewhite;
+                
+            }
+             #slide3 {
+                position: relative;
+                width: 100%;
+                height: 900px;
+                background-color: #ff8300;
+                 top:600px;
+            }
+   
+            .navbar {
+                margin-bottom: 0px;   
+                
+            }
+            .golden_button {
+              display: block;
+              width: 100%;
+              background-color: #ffcd00;
+              border-color: #ffcd00;
+              border-radius: 0px;
+            }
+
+            h4{
+                font-size: 21px;
+            }
+            p {
+                font-size: 13px;   
+            }
+        
+        </style>
+
+    </head>
+
+    <body>
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#c8c8c8; border-color: white;">
+  <div class="container-fluid" style="height: 100px;">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" style="  margin-left: 450px; padding-top: 25px;">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="# " style = "font-size: 15px; color: #ffcd00;">Twitter Analysis</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+      <ul class="nav navbar-nav " style="padding-right: 50px;">
+        <li class="active"><a href="#" id = "zhuce" style="padding-top:40px;padding-right:20px;font-size:14px;">Start</a></li>
+          <li><a href="#" style="padding-top:40px;padding-right:20px;font-size:14px;" id = "jieshao">Fun</a></li>
+  
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+        
+    <div class = "container-fliud" style="top:100px;">
+        <div id = "slide1" style="text-align:center;">
+
+            <h1 style="color:white;">ARE YOU READY FOR THE ANALYSIS?</h1>
+            <h1 style="color:white;">Input the screen name that you wanna search</h1>
+            <hr><hr>
+            <form method="post" action="index.php">
+                <input type="text" class="btn btn-default" name = "screenname" placeholder="screenname" />
+                <input type="submit" class="btn btn-default" name="submit" value="submit">
+            
+            </form>
+            <hr style="margin-top: 500px;color:#c8c8c8;">
+        </div>    
+        <div id = "slide2">
+
+        </div>
+        <div id = "slide3">
+
+        </div>
+
+
+    </div>
+    
+        
+                <script>
+                    
+                    localStorage.setItem("username",document.getElementById("name"));
+            document.getElementById("zhuce").onmouseover = function() {mouseOver()};
+    
+            function mouseOver(){
+                   $('html, body').animate({
+                        scrollTop: $("#slide2").offset().top
+                    }, 600);
+                
+            }
+        
+            document.getElementById("jieshao").onmouseover = function() {mouseOver1()};
+    
+            function mouseOver1(){
+                   $('html, body').animate({
+                        scrollTop: $("#slide3").offset().top
+                    }, 600);
+                
+            }
+        </script>
+        
+    </body>
+</html>
